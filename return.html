@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fast4MP – Authentication Complete</title>
+</head>
+<body>
+
+<h1>Authentication Successful</h1>
+<p>You may now return to the Fast4MP extension.</p>
+
+<script>
+  // If opened from extension, notify it
+  if (window.opener) {
+    window.opener.postMessage({ fast4mp_auth_complete: true }, "*");
+  }
+</script>
+
+</body>
+</html>
