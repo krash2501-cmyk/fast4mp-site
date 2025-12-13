@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fast4MP – Authentication Complete</title>
-</head>
-<body>
 
-<h1>Authentication Successful</h1>
-<p>You may now return to the Fast4MP extension.</p>
+  <style>
+    :root {
+      --brand-blue: #0b6bff;
+      --bg-light: #f6f7f9;
+      --text-dark: #1f2937;
+      --text-muted: #6b7280;
+      --card-bg: #ffffff;
+      --radius: 14px;
+    }
 
-<script>
-  // If opened from extension, notify it
-  if (window.opener) {
-    window.opener.postMessage({ fast4mp_auth_complete: true }, "*");
-  }
-</script>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
 
-</body>
-</html>
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      max-width: 420px;
+      widt
